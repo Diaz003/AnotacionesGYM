@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Entrenamiento</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Registro de Entrenamiento 🏋️‍♂️</h1>
+
+  <div class="controls">
+    <select id="dia">
+      <option value="">Selecciona un día</option>
+      <option value="Piernas">Piernas Completas 🦵</option>
+      <option value="Pecho">Pecho, Hombros y Tríceps 💪</option>
+      <option value="Espalda">Espalda y Bíceps 🚣‍♂️</option>
+      <option value="FullBody">Full Body 🔥</option>
+    </select>
+    <button onclick="loadData()">Cargar Ejercicios</button>
+    <button onclick="addRow()">Añadir Ejercicio</button>
+    <button onclick="saveData()">Guardar</button>
+    <button onclick="downloadData()">Descargar TXT</button>
+    <button onclick="drawGraph()">Mostrar Gráfica</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Ejercicio</th>
+        <th>Peso (kg)</th>
+        <th>Reps</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+      <!-- Aquí se insertarán filas dinámicamente -->
+    </tbody>
+  </table>
+
+  <canvas id="myChart" width="400" height="200"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
